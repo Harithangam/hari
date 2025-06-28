@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web to Case Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9;">
+
+  <h2 style="text-align: center;">Submit a Case</h2>
+
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DWd000006dfRF" method="POST">
+
+    <input type="hidden" name="orgid" value="00DWd000006dfRF">
+    <input type="hidden" name="retURL" value="https://www.adamstech.in/">
+    <input type="hidden" id="priority" name="priority" value="Medium">
+
+    <label for="name" style="display: block; margin-top: 10px;">
+      Full Name: <span style="color: red;">*</span>
+    </label>
+    <input id="name" maxlength="80" name="name" size="40" type="text" style="width: 100%; padding: 8px;" required>
+
+    <label for="email" style="display: block; margin-top: 10px;">
+      Email (Registered email address): <span style="color: red;">*</span>
+    </label>
+    <input id="email" maxlength="80" name="email" size="40" type="email" style="width: 100%; padding: 8px;" required>
+
+    <label for="phone" style="display: block; margin-top: 10px;">Phone: <span style="color: red;">*</span></label>
+    <input id="phone" maxlength="40" name="phone" size="40" type="text" style="width: 100%; padding: 8px;">
+
+    <label for="company" style="display: block; margin-top: 10px;">Company:</label>
+    <input id="company" maxlength="80" name="company" size="40" type="text" style="width: 100%; padding: 8px;">
+
+    <label for="subject" style="display: block; margin-top: 10px;">
+      Subject: <span style="color: red;">*</span>
+    </label>
+    <input id="subject" maxlength="80" name="subject" size="40" type="text" style="width: 100%; padding: 8px;" required>
+
+    <label for="description" style="display: block; margin-top: 10px;">
+      Case Description: <span style="color: red;">*</span>
+    </label>
+    <textarea id="description" name="description" rows="5" style="width: 100%; padding: 8px;" required></textarea>
+
+    <label for="00NWd0000059snt" style="display: block; margin-top: 10px;">
+      Invoice No / Order No: <span style="color: red;">*</span>
+    </label>
+    <input id="00NWd0000059snt" maxlength="255" name="00NWd0000059snt" size="40" type="text" style="width: 100%; padding: 8px;">
+    <!-- Add required if you want: required -->
+
+    <label for="reason" style="display: block; margin-top: 10px;">
+      Case Problem: <span style="color: red;">*</span>
+    </label>
+    <select id="reason" name="reason" style="width: 100%; padding: 8px;" required>
+      <option value="">--None--</option>
+      <option value="Installation">Installation</option>
+      <option value="Equipment Complexity">Equipment Complexity</option>
+      <option value="Performance">Performance</option>
+      <option value="Breakdown">Breakdown</option>
+      <option value="Equipment Design">Equipment Design</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="00NWd000004kY1K" style="display: block; margin-top: 10px;">
+      Product on the Case: <span style="color: red;">*</span>
+    </label>
+    <select id="00NWd000004kY1K" name="00NWd000004kY1K" title="Product" style="width: 100%; padding: 8px;">
+      <option value="">--None--</option>
+      <option value="Two-Wheeler Dynamometer">Two-Wheeler Dynamometer</option>
+      <option value="FFT Analyzer">FFT Analyzer</option>
+      <option value="Impact Testing">Impact Testing</option>
+      <option value="Modal Analysis">Modal Analysis</option>
+      <option value="Rotating Machinery Analysis">Rotating Machinery Analysis</option>
+      <option value="Acoustic Analysis">Acoustic Analysis</option>
+      <option value="Environmental Vibration Testing">Environmental Vibration Testing</option>
+      <option value="Portable Data Acquisition Systems">Portable Data Acquisition Systems</option>
+      <option value="Multichannel Data Acquisition Systems">Multichannel Data Acquisition Systems</option>
+      <option value="Miniature &amp; Rugged Data Acquisition Systems">Miniature &amp; Rugged Data Acquisition Systems</option>
+      <option value="CRASH Testing DAS">CRASH Testing DAS</option>
+      <option value="In-Dummy DAS">In-Dummy DAS</option>
+      <option value="In-Flight Testing DAS">In-Flight Testing DAS</option>
+      <option value="Transport Recorders">Transport Recorders</option>
+      <option value="Drop Test Systems">Drop Test Systems</option>
+      <option value="Mechnical Shaker Test Systems">Mechnical Shaker Test Systems</option>
+      <option value="TruMotion Acceleration Test Systems">TruMotion Acceleration Test Systems</option>
+      <option value="Inclined Impact System">Inclined Impact System</option>
+      <option value="Saver TM Shock &amp; Vibration Data Recorders">Saver TM Shock &amp; Vibration Data Recorders</option>
+      <option value="Universal Launchers">Universal Launchers</option>
+      <option value="Sled Facilities">Sled Facilities</option>
+      <option value="Seat belt Anchorage Test(SBA) Systems">Seat belt Anchorage Test(SBA) Systems</option>
+      <option value="Head Restraint Performaces(HRP) Test Rig">Head Restraint Performaces(HRP) Test Rig</option>
+      <option value="Roof Crush and Side Intrusion(RCSI)">Roof Crush and Side Intrusion(RCSI)</option>
+      <option value="Energy Absorption Impact Test Rig(EAITR)">Energy Absorption Impact Test Rig(EAITR)</option>
+      <option value="Bumper Pendulum">Bumper Pendulum</option>
+      <option value="Dummy Load Cells">Dummy Load Cells</option>
+      <option value="Vechicle Safety Sensors">Vechicle Safety Sensors</option>
+      <option value="Current Puilse Sensors">Current Puilse Sensors</option>
+      <option value="Angular Rate Sensors">Angular Rate Sensors</option>
+      <option value="Voltage Measurement Module">Voltage Measurement Module</option>
+      <option value="Acceleromets">Acceleromets</option>
+      <option value="INFKL 150 C">INFKL 150 C</option>
+      <option value="Wheel Speed Sensors">Wheel Speed Sensors</option>
+      <option value="Microphones">Microphones</option>
+      <option value="Force Sensors">Force Sensors</option>
+      <option value="Pressure Sensors">Pressure Sensors</option>
+      <option value="Impulse Hammer kit">Impulse Hammer kit</option>
+    </select>
+
+    <button type="submit" style="margin-top: 20px; padding: 10px 20px; background: #0070d2; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+      Submit Case
+    </button>
+
+  </form>
+
+</body>
+</html>
